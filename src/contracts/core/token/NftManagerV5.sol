@@ -118,7 +118,7 @@ contract NftManagerV5 is
     /// @custom:oz-upgrades-validate-as-initializer
     function initializeV5(
         address _stakingManagerAddress
-    ) public reinitializer(5) {
+    ) public onlyOwner reinitializer(5) {
         stakingManagerAddress = IStakingManager(_stakingManagerAddress);
     }
 

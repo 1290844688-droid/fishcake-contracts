@@ -28,7 +28,7 @@ contract IERC20Deployer is DeploymentScirptBase {
     function deploy(address deployer, uint256 initialSupply) public returns (address token){
         require(initialSupply > 0, "USDT:supply is zero");
         _startDeployment(deployer);
-        token = address(new FccUsdtERC20("Amoy Test USDT", "aUSDT", initialSupply, deployer));
+        token = address(new FccUsdtERC20("Sepolia Test USDT", "aUSDT", initialSupply, deployer));
         vm.stopBroadcast();
         console.log("USDT_ADDRESS:", token);
         console.log("Initial Supply(6 decimals):", initialSupply);

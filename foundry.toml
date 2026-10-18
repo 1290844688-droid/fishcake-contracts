@@ -30,6 +30,9 @@ solc_version = "0.8.26"
 [profile.amoy]
 eth_rpc_url = "https://polygon-amoy-bor-rpc.publicnode.com"
 
+[profile.sepolia]
+eth_rpc_url = "https://sepolia.infura.io/v3/907b43397ad740298d8ca5b2e169294a"
+
 #[etherscan]
 #polygon = { key = "${POLYGON_API_KEY}", chain = 137, url = "https://api.polygonscan.com/api"}
 #sepolia = { key = "${ETHERSCAN_API_KEY}" }

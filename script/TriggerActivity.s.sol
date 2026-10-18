@@ -12,7 +12,7 @@ contract TriggerActivityScript is DeploymentScirptBase {
     using SafeERC20 for IERC20;
 
     address public constant ACTOR_ADDRESS = 0x5CFbfE556626350D7105e2dFe96F4cf03056f754;
-    address public constant EVENT_MANAGER_ADDRESS = 0x56c2115c021E89a97211da39A83727332Fb9d4C4;
+    address public constant EVENT_MANAGER_ADDRESS =address(0);
     string  public constant BUSINESS_NAME = "Amoy Test Business";
     string  public constant ACTIVITY_CONTENT = "ActivityAdd intergration test";
     string  public constant LATITUDE_LONGTITUDE = "100,50";

@@ -13,7 +13,7 @@ import {Script, console} from "forge-std/Script.sol";
 contract DeployerFishcakeEventMangerScript is DeploymentScirptBase {
     address public constant DEPLOYER_ADDRESS = 0x5CFbfE556626350D7105e2dFe96F4cf03056f754;
 
-    address public constant USDT_ADDRESS = 0xb35E1cfbdAC1949cDe6FD8e24c1DA0ffBE469cB3;
+    address public constant USDT_ADDRESS = address(0);
 
     function run() public returns (address proxy){
         require(DEPLOYER_ADDRESS != address(0), "EventManager: deployer is zero");
@@ -22,7 +22,7 @@ contract DeployerFishcakeEventMangerScript is DeploymentScirptBase {
 
 
     function deployActivityOnly(address deployer, address usdtAddress) public returns (address proxy) {
-        _requireToken(usdtAddress, "USDT");
+        _requireToken(usdtAddress, "aUSDT");
         proxy = _deployInitialized(deployer, address(0), usdtAddress, address(0));
         console.log("ActivityAdd-only test instrance:FCC and NFT are unset");
         console.log("Do not use reward,finish or refund paths with this instance");

@@ -9,7 +9,7 @@ import {ERC1967Utils} from "@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.s
 abstract contract DeploymentScirptBase is Script {
 
     function _startDeployment(address deployer) internal {
-        require(block.chainid == 80002, "Deployment: chain must be Amoy (80002)");
+        require(block.chainid == 11155111, "Deployment: chain must be Sepolia (11155111)");
         require(deployer != address(0), "Deployment: deployer is zero");
         vm.startBroadcast(deployer);
     }
